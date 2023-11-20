@@ -69,8 +69,8 @@ class HalftoneImageEncryption:
                     self.share1.append(pix[0][1])
                     self.share2.append(pix[1][0])
                     self.share2.append(pix[1][1])
-        share1 = Image.new("L", (self.image.width, self.image.height*2))
-        share2 = Image.new("L", (self.image.width, self.image.height*2))
+        share1 = Image.new("L", (self.image.width*2, self.image.height))
+        share2 = Image.new("L", (self.image.width*2, self.image.height))
 
         share1.putdata(self.share1)
         share2.putdata(self.share2)
